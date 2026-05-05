@@ -115,6 +115,29 @@ html, body {
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.revealed { opacity: 1; transform: translateY(0); }
 
+.about-content { max-width: 88ch; }
+.about-lead {
+  margin: 0 0 20px;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.about-body { margin: 0 0 32px; line-height: 1.65; }
+.about-subheading {
+  margin: 36px 0 16px;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.about-bridge {
+  margin: 32px 0 0;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+  border-left: 3px solid var(--text);
+  padding-left: 16px;
+}
+
 .article-list { margin: 8px 0 0; padding-left: 20px; }
 .article-list li { margin-bottom: 10px; }
 .article-list a {
