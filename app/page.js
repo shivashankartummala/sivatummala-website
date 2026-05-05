@@ -26,7 +26,7 @@ export default function HomePage() {
           <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
-        <span className="availability">Available for Q3/Q4 AI Architectural Contracts.</span>
+        <span className="availability">SFO Bay Area | US Time Zone | Remote</span>
       </header>
 
       <section className="hero section-grid" id="top">
@@ -37,7 +37,7 @@ export default function HomePage() {
             Founding Architect of Oracle CX Unity. Leading the transition from green-field prototypes to global
             enterprise ecosystems.
           </p>
-          <p className="hero-copy">Based in Tracy, CA | Global Remote Availability</p>
+          <p className="hero-copy">SFO Bay Area | US Time Zone | Remote</p>
           <div className="cta-row">
             <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal via Email</a>
           </div>
