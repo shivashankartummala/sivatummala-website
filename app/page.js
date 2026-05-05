@@ -31,7 +31,7 @@ export default function HomePage() {
 
       <section className="hero section-grid" id="top">
         <div>
-          <h1 className="hero-title">SIVA SANKAR TUMMALA.</h1>
+          
           <p className="hero-subtitle">Fractional AI Solutions Architect | Agentic Orchestration Expert</p>
           <p className="hero-copy">
             Founding Architect of Oracle CX Unity. Leading the transition from green-field prototypes to global
