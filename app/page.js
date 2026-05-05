@@ -44,6 +44,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="about section-grid" aria-labelledby="about-heading">
+        <h2 id="about-heading" className="section-title">About</h2>
+        <div className="about-content">
+          <p className="about-lead">
+            Most enterprise AI initiatives are stuck in the &ldquo;Chatbot&rdquo; phase. I help companies move beyond
+            simple RAG to build autonomous Agentic solutions that actually execute work.
+          </p>
+          <p className="about-body">
+            As the Founding Architect of Oracle CX Unity, I designed and scaled a global platform for 200+ enterprise
+            customers across 24 regions. Today, I offer my 15+ years of systems architecture experience as a Remote
+            Design &amp; Build Contractor for organizations ready to deploy production-grade AI.
+          </p>
+
+          <h3 className="about-subheading">What I Deliver for Clients</h3>
+          <div className="feature-list">
+            <article className="feature-item">
+              <h3>Agentic Orchestration</h3>
+              <p>
+                I design and build stateful, multi-step reasoning workflows and Multi-Agent Systems (MAS) using{' '}
+                <strong>LangGraph</strong> and <strong>LangChain</strong>.
+              </p>
+            </article>
+            <article className="feature-item">
+              <h3>Enterprise-Grade RAG</h3>
+              <p>
+                I implement advanced retrieval patterns, including <strong>semantic chunking</strong> and{' '}
+                <strong>metadata filtering</strong>, to achieve 60% higher servicing efficiency.
+              </p>
+            </article>
+            <article className="feature-item">
+              <h3>High-Velocity Implementation</h3>
+              <p>
+                I accelerate AI solution delivery from weeks to days (up to 80% improvement in release velocity) by
+                engineering cloud-agnostic, automated delivery pipelines.
+              </p>
+            </article>
+            <article className="feature-item">
+              <h3>Governed LLMOps</h3>
+              <p>
+                I architect secure, observable, and cost-efficient AI platforms using <strong>KServe</strong>,{' '}
+                <strong>ArgoCD</strong>, and <strong>OpenTelemetry</strong> to ensure models are production-ready.
+              </p>
+            </article>
+          </div>
+
+          <h3 className="about-subheading">The Engagement Model</h3>
+          <p className="about-body">I specialize in high-impact, remote contracts focused on:</p>
+          <div className="feature-list">
+            <article className="feature-item">
+              <h3>Architectural Blueprints</h3>
+              <p>Designing the foundation for scalable Agentic workflows.</p>
+            </article>
+            <article className="feature-item">
+              <h3>Prototype-to-Production Builds</h3>
+              <p>
+                &ldquo;Wiring together&rdquo; enterprise APIs and multi-agent systems for rapid deployment.
+              </p>
+            </article>
+            <article className="feature-item">
+              <h3>AI Governance Audits</h3>
+              <p>
+                Leveraging insights from my upcoming book,{' '}
+                <em>The AI Governance North Star</em>, to architect trust and compliance into Agentic systems.
+              </p>
+            </article>
+          </div>
+
+          <p className="about-bridge">
+            I bridge the gap between &ldquo;bleeding-edge&rdquo; AI experimentation and the stable, secure
+            infrastructure required by the modern enterprise.
+          </p>
+        </div>
+      </section>
+
       <section className="section-grid" aria-labelledby="deep-dive-heading">
         <h2 id="deep-dive-heading" className="section-title">The Agentic Deep Dive</h2>
         <div className="feature-list">
