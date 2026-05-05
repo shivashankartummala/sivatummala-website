@@ -24,8 +24,8 @@ export default function HomePage() {
         <p className="mono identity">SIVA SANKAR TUMMALA</p>
         <nav className="header-links mono" aria-label="Primary">
           <a href="mailto:shivashankar.tummala@gmail.com">Email</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#">Download Resume PDF</a>
         </nav>
         <p className="availability">Available for Q3/Q4 AI Architectural Contracts.</p>
@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="hero-right">
           <div className="hero-metadata">
             <p className="mono">LOCATION</p>
-            <p>Based in Tracy, CA | Global Remote Availability.</p>
+            <p>Based in SFO Bay Area, CA | US Timezones Remote Availability.</p>
           </div>
         </div>
       </section>
