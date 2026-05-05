@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 
 export default function HomePage() {
+  // Trigger commit for Cloudflare redeploy verification.
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
