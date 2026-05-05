@@ -57,7 +57,7 @@ export default function HomePage() {
             <h3>Enterprise Connectivity</h3>
             <p>
               Early adopter of <strong>Model Context Protocol (MCP)</strong> for secure, standardized
-              agent-to-API communication.
+              agent-to-API communication across diverse enterprise data silos.
             </p>
           </article>
           <article className="feature-item">
@@ -68,10 +68,18 @@ export default function HomePage() {
             </p>
           </article>
           <article className="feature-item">
-            <h3>Local AI Privacy</h3>
+            <h3>Inference Observability</h3>
             <p>
-              Proven expertise in air-gapped AI deployments, including a personal LLM Wiki built on an{' '}
-              <strong>M5 MacBook Pro</strong> for secure document management.
+              Engineering robust distributed tracing for non-deterministic Agentic workflows to ensure
+              enterprise-grade auditability and reliability.
+            </p>
+          </article>
+          <article className="feature-item">
+            <h3>Industry Leadership</h3>
+            <p>
+              Invited Speaker at the <strong>AI Infra Summit 2026</strong> (Santa Clara) to lead the panel on{' '}
+              <strong>Securing End-to-End Tracing in the AI Inference Era</strong>, defining industry standards for
+              AI reliability and security.
             </p>
           </article>
         </div>
