@@ -20,25 +20,26 @@ export default function HomePage() {
   return (
     <main className="page">
       <header className="site-header">
-        <p className="mono identity">SST</p>
+        <p className="mono identity">SIVA SANKAR TUMMALA</p>
         <nav className="header-links" aria-label="Primary">
-          <a href="mailto:shivashankar.tummala@gmail.com">Email</a>
+          <a href="mailto:shivashankar.tummala@gmail.com">Email: shivashankar.tummala@gmail.com</a>
           <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
+        <span className="availability">Available for Q3/Q4 AI Architectural Contracts.</span>
       </header>
 
       <section className="hero section-grid" id="top">
         <div>
           <h1 className="hero-title">SIVA SANKAR TUMMALA.</h1>
-          <p className="hero-subtitle">Fractional AI Solutions Architect | Agentic Orchestration | ProdOps MLOps.</p>
+          <p className="hero-subtitle">Fractional AI Solutions Architect | Agentic Orchestration Expert</p>
           <p className="hero-copy">
-            Founding Architect of Oracle CX Unity. Architecting autonomous multi-agent systems and secure AI governance
-            for the global enterprise.
+            Founding Architect of Oracle CX Unity. Leading the transition from green-field prototypes to global
+            enterprise ecosystems.
           </p>
+          <p className="hero-copy">Based in Tracy, CA | Global Remote Availability</p>
           <div className="cta-row">
-            <a href="#" className="cta-link">Download Resume PDF</a>
-            <span className="availability">Available for Q3/Q4 Contract Engagement.</span>
+            <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal via Email</a>
           </div>
         </div>
       </section>
@@ -77,32 +78,44 @@ export default function HomePage() {
           <article className="feature-item">
             <h3>Industry Leadership</h3>
             <p>
-              Invited Speaker at the <strong>AI Infra Summit 2026</strong> (Santa Clara) to lead the panel on{' '}
-              <strong>Securing End-to-End Tracing in the AI Inference Era</strong>, defining industry standards for
-              AI reliability and security.
+              Featured Panelist at the <strong>AI Infra Summit 2026</strong> (Santa Clara) |{' '}
+              <strong>Compute Track</strong> panel alongside Kentik, presenting on{' '}
+              <strong>Securing End-to-End Tracing in the AI Inference Era</strong>.
             </p>
           </article>
         </div>
       </section>
 
       <section className="impact section-grid" aria-labelledby="impact-heading">
-        <h2 id="impact-heading" className="section-title">Impact</h2>
+        <h2 id="impact-heading" className="section-title">Agentic Impact Metrics</h2>
         <div className="bento-grid">
           <article className="bento-card reveal">
-            <p className="metric">80% Delivery Acceleration</p>
-            <p>AI-augmented DevSecOps golden-path pipelines.</p>
+            <p className="metric">50% Operational Efficiency</p>
+            <p>
+              Reduced manual document-servicing effort by 50% for a global customer base by architecting autonomous
+              Multi-Agent Systems (MAS) using LangGraph for stateful, multi-step reasoning.
+            </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">200+ Enterprise Customers</p>
-            <p>Across 24 global regions in OCI-native SaaS ecosystem.</p>
+            <p className="metric">60% Insight Retrieval Gain</p>
+            <p>
+              Engineered production-grade RAG platforms utilizing semantic chunking and metadata filtering, reducing
+              complex insight retrieval latency from minutes to sub-second responses.
+            </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">$250K Annual Savings</p>
-            <p>Automated right-sizing and multi-cloud governance.</p>
+            <p className="metric">80% AI Delivery Acceleration</p>
+            <p>
+              Accelerated the lifecycle of Agentic workflows by architecting AI-augmented golden-path pipelines,
+              reducing regional onboarding and release velocity from weeks to days.
+            </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">99.99% SLO Compliance</p>
-            <p>Mission-critical AI workloads with ML-based anomaly detection.</p>
+            <p className="metric">100% Deterministic AI Governance</p>
+            <p>
+              Achieved 100% auditable ML delivery and drift detection for non-deterministic workloads by integrating
+              GitOps (ArgoCD) with embedded Policy-as-Code (OPA/Rego) guardrails.
+            </p>
           </article>
         </div>
       </section>
@@ -112,14 +125,14 @@ export default function HomePage() {
         <div className="feature-list">
           <article className="feature-item">
             <p className="mono">BOOK</p>
-            <h3>The AI Governance North Star</h3>
-            <p>A blueprint for secure, governed enterprise AI.</p>
+            <h3>AI Governance NorthStar</h3>
+            <p>A book on AI Governance.</p>
             <p><a href="https://lnkd.in/gKUheZer" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a></p>
           </article>
           <article className="feature-item">
             <p className="mono">BOOK</p>
-            <h3>The Elastic Brain</h3>
-            <p>A technical guide to Kubernetes-Native MLOps.</p>
+            <h3>The Elastic Brain.</h3>
+            <p>A book on Kubernates autoscaling for ML based applications.</p>
             <p><a href="https://lnkd.in/gdUKzrP9" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a></p>
           </article>
           <article className="feature-item">
@@ -130,9 +143,10 @@ export default function HomePage() {
           <article className="feature-item">
             <p className="mono">ARTICLES</p>
             <ul className="article-list">
-              <li><a href="https://lnkd.in/gRkpdVJG" target="_blank" rel="noopener noreferrer">Stateful Multi-Agent Reasoning with LangGraph</a></li>
-              <li><a href="https://lnkd.in/gEqdEdZP" target="_blank" rel="noopener noreferrer">Shift-Left Security: OPA/Rego in AI Pipelines</a></li>
-              <li><a href="https://lnkd.in/gDhB4tiQ" target="_blank" rel="noopener noreferrer">Zero-Downtime AI Delivery with ArgoCD</a></li>
+              <li><a href="https://lnkd.in/gEqdEdZP" target="_blank" rel="noopener noreferrer">Advanced Context Engineering for Agentic RAG</a></li>
+              <li><a href="https://lnkd.in/gDhB4tiQ" target="_blank" rel="noopener noreferrer">Agentic Orchestration Patterns</a></li>
+              <li><a href="https://lnkd.in/gRkpdVJG" target="_blank" rel="noopener noreferrer">Multi-Agent Architecture Design Patterns</a></li>
+              <li><a href="https://lnkd.in/gXwrqDxw" target="_blank" rel="noopener noreferrer">Building Resilient Agentic Workflows with AWS Bedrock</a></li>
             </ul>
           </article>
         </div>
@@ -169,10 +183,15 @@ export default function HomePage() {
       </section>
 
       <footer className="contact section-grid" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="section-title">Direct Access</h2>
-        <p className="footer-line mono">shivashankar.tummala@gmail.com | 262-271-7486</p>
-        <p className="footer-line">Certifications: OCI Generative AI Professional & OCI Cloud Architect (2025).</p>
-        <p className="footer-line">Academic: MS in Computer Science (4.0 GPA) | MCA | BCA.</p>
+        <h2 id="contact-heading" className="section-title">SIVA SANKAR TUMMALA</h2>
+        <p className="footer-line mono">shivashankar.tummala@gmail.com</p>
+        <p className="footer-line">
+          <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          {' | '}
+          <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+        <p className="footer-line">Credentials: OCI Certified Cloud Architect & Generative AI Professional (2025)</p>
+        <p className="footer-line">Academic: MS in Computer Science (4.0 GPA) | MCA | BCA</p>
       </footer>
     </main>
   );
