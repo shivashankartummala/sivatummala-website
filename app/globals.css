@@ -75,6 +75,13 @@ html, body {
   padding: 80px 0;
 }
 
+/* ── Two column layout ── */
+.two-column-layout {
+  border-top: 1px solid var(--border);
+  padding: 80px 0;
+  margin-left: 50%;
+}
+
 .section-title {
   margin: 0 0 32px;
   font-size: clamp(2rem, 4vw, 2.8rem);
@@ -337,6 +344,7 @@ html, body {
 @media (max-width: 1024px) {
   .about-layout { grid-template-columns: 1fr; gap: 40px; }
   .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-column-layout { margin-left: 0; }
 }
 
 @media (max-width: 768px) {

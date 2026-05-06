@@ -35,7 +35,7 @@ export default function HomePage() {
 
       <section className="hero section-grid" id="top">
         <div className="hero-inner">
-          <h1 className="hero-name">Siva Sankar<br />Tummala</h1>
+          <h2 className="hero-name">Siva Sankar<br />Tummala</h2>
           <p className="hero-subtitle">Fractional AI Solutions Architect · Agentic Orchestration Expert</p>
           <p className="hero-copy">
             Founding Architect of Oracle CX Unity — scaled to 200+ enterprise customers across 24 regions.
@@ -163,43 +163,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="impact section-grid" aria-labelledby="impact-heading" id="impact">
-        <h2 id="impact-heading" className="section-title">Agentic Impact Metrics</h2>
-        <div className="bento-grid">
-          <article className="bento-card reveal">
-            <p className="metric">50%</p>
-            <p className="metric-label">Operational Efficiency</p>
-            <p>
-              Reduced manual document-servicing effort by architecting autonomous Multi-Agent Systems (MAS)
-              using LangGraph for stateful, multi-step reasoning.
-            </p>
-          </article>
-          <article className="bento-card reveal">
-            <p className="metric">60%</p>
-            <p className="metric-label">Insight Retrieval Gain</p>
-            <p>
-              Production-grade RAG with semantic chunking and metadata filtering — retrieval latency from
-              minutes to sub-second responses.
-            </p>
-          </article>
-          <article className="bento-card reveal">
-            <p className="metric">80%</p>
-            <p className="metric-label">AI Delivery Acceleration</p>
-            <p>
-              AI-augmented golden-path pipelines compressing regional onboarding and release velocity
-              from weeks to days.
-            </p>
-          </article>
-          <article className="bento-card reveal">
-            <p className="metric">100%</p>
-            <p className="metric-label">Deterministic AI Governance</p>
-            <p>
-              Auditable ML delivery and drift detection via GitOps (ArgoCD) with embedded
-              Policy-as-Code (OPA/Rego) guardrails.
-            </p>
-          </article>
-        </div>
-      </section>
+      <div className="two-column-layout">
+        <section className="impact" aria-labelledby="impact-heading" id="impact">
+          <h2 id="impact-heading" className="section-title">Agentic Impact Metrics</h2>
+          <div className="bento-grid">
+            <article className="bento-card reveal">
+              <p className="metric">50%</p>
+              <p className="metric-label">Operational Efficiency</p>
+              <p>
+                Reduced manual document-servicing effort by architecting autonomous Multi-Agent Systems (MAS)
+                using LangGraph for stateful, multi-step reasoning.
+              </p>
+            </article>
+            <article className="bento-card reveal">
+              <p className="metric">60%</p>
+              <p className="metric-label">Insight Retrieval Gain</p>
+              <p>
+                Production-grade RAG with semantic chunking and metadata filtering — retrieval latency from
+                minutes to sub-second responses.
+              </p>
+            </article>
+            <article className="bento-card reveal">
+              <p className="metric">80%</p>
+              <p className="metric-label">AI Delivery Acceleration</p>
+              <p>
+                AI-augmented golden-path pipelines compressing regional onboarding and release velocity
+                from weeks to days.
+              </p>
+            </article>
+            <article className="bento-card reveal">
+              <p className="metric">100%</p>
+              <p className="metric-label">Deterministic AI Governance</p>
+              <p>
+                Auditable ML delivery and drift detection via GitOps (ArgoCD) with embedded
+                Policy-as-Code (OPA/Rego) guardrails.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
 
       <section className="section-grid" aria-labelledby="kb-heading" id="kb">
         <h2 id="kb-heading" className="section-title">Knowledge Base</h2>
