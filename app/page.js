@@ -105,19 +105,16 @@ export default function HomePage() {
             <h3 className="about-subheading">Engagement Model</h3>
             <div className="card-grid-3">
               <article className="feature-item reveal">
-                <h4>Architectural Blueprints</h4>
-                <p>Designing the foundation for scalable Agentic workflows.</p>
+                <h4>Fractional Leadership (Retainer)</h4>
+                <p>Long-term, part-time architectural oversight and AI strategy for organizations scaling their Agentic ecosystem.</p>
               </article>
               <article className="feature-item reveal">
-                <h4>Prototype → Production</h4>
-                <p>Wiring together enterprise APIs and multi-agent systems for rapid deployment.</p>
+                <h4>Project-Based Execution (SOW)</h4>
+                <p>End-to-end "Zero-to-One" delivery—taking a prototype to a production-grade Agentic system in a defined timeline.</p>
               </article>
               <article className="feature-item reveal">
-                <h4>AI Governance Audits</h4>
-                <p>
-                  Architecting trust and compliance into Agentic systems — informed by{' '}
-                  <em>The AI Governance North Star</em>.
-                </p>
+                <h4>Strategic Advisory & Audits</h4>
+                <p>Short-term, high-impact engagements focused on AI Governance, Inference Tracing, and Infrastructure right-sizing.</p>
               </article>
             </div>
           </div>
