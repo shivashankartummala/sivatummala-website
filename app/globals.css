@@ -130,6 +130,12 @@ html, body {
   object-fit: cover;
   border: 1px solid var(--border);
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .hero-name {

@@ -196,14 +196,6 @@ export default function HomePage() {
               and reliability at scale.
             </p>
           </article>
-          <article className="feature-item card-grid-2-span">
-            <h3>Industry Leadership</h3>
-            <p>
-              Featured Panelist at the <strong>AI Infra Summit 2026</strong> (Santa Clara) ·{' '}
-              <strong>Compute Track</strong> —{' '}
-              <strong>Securing End-to-End Tracing in the AI Inference Era</strong>.
-            </p>
-          </article>
         </div>
       </section>
 
@@ -222,11 +214,6 @@ export default function HomePage() {
             <h3>The Elastic Brain</h3>
             <p>Kubernetes autoscaling strategies for ML-based applications.</p>
             <p><a href="https://lnkd.in/gdUKzrP9" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></p>
-          </article>
-          <article className="feature-item">
-            <p className="mono kb-type">TALK</p>
-            <h3>Securing End-to-End Tracing in the AI Inference Era</h3>
-            <p>AI Infra Summit 2026 · Santa Clara · Compute Track</p>
           </article>
         </div>
         <div className="feature-item kb-articles">
