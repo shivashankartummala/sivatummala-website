@@ -115,8 +115,25 @@ html, body {
 
 .hero-inner { max-width: 900px; }
 
+/* ── Hero name section with photo ── */
+.hero-name-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.hero-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
 .hero-name {
-  margin: 0 0 24px;
+  margin: 0;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   letter-spacing: -0.045em;
   line-height: 0.93;
@@ -374,7 +391,8 @@ html, body {
   .card-grid-2-span { grid-column: auto; }
   .timeline-list { grid-template-columns: 1fr; }
   .site-header { flex-wrap: wrap; }
-  .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
+  .hero-name-section { gap: 16px; margin-bottom: 20px; }
+  .hero-photo { width: 70px; height: 70px; }
 }
 
 @media (max-width: 480px) {

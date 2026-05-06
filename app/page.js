@@ -36,7 +36,10 @@ export default function HomePage() {
       <div className="hero-impact-wrapper">
         <section className="hero section-grid" id="top">
           <div className="hero-inner">
-            <h2 className="hero-name">Siva Sankar<br />Tummala</h2>
+            <div className="hero-name-section">
+              <img src="/images/sivatummala_monochrome.jpg" alt="Siva Sankar Tummala" className="hero-photo" />
+              <h2 className="hero-name">Siva Sankar<br />Tummala</h2>
+            </div>
             <p className="hero-subtitle">Fractional AI Solutions Architect · Agentic Orchestration Expert</p>
             <p className="hero-copy">
               Architecting autonomous multi-agent systems and secure inference pipelines that bridge the gap between AI experimentation and enterprise-grade production.
