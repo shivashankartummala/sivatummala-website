@@ -10,7 +10,7 @@ export default function HomePage() {
           if (entry.isIntersecting) entry.target.classList.add('revealed');
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
@@ -22,110 +22,116 @@ export default function HomePage() {
       <header className="site-header">
         <p className="mono identity">SIVA SANKAR TUMMALA</p>
         <nav className="header-links" aria-label="Primary">
-          <a href="mailto:shivashankar.tummala@gmail.com">Email: shivashankar.tummala@gmail.com</a>
+          <a href="#about">About</a>
+          <a href="#deep-dive">Work</a>
+          <a href="#impact">Impact</a>
+          <a href="#kb">Writing</a>
+          <a href="mailto:shivashankar.tummala@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
-        <span className="availability">SFO Bay Area | US Time Zone | Remote</span>
+        <span className="availability">Available · Remote</span>
       </header>
 
       <section className="hero section-grid" id="top">
-        <div>
-          
-          <p className="hero-subtitle">Fractional AI Solutions Architect | Agentic Orchestration Expert</p>
+        <div className="hero-inner">
+          <h1 className="hero-name">Siva Sankar<br />Tummala</h1>
+          <p className="hero-subtitle">Fractional AI Solutions Architect · Agentic Orchestration Expert</p>
           <p className="hero-copy">
-            Founding Architect of Oracle CX Unity. Leading the transition from green-field prototypes to global
-            enterprise ecosystems.
+            Founding Architect of Oracle CX Unity — scaled to 200+ enterprise customers across 24 regions.
+            Now available as a Remote Design &amp; Build Contractor for production-grade AI.
           </p>
-          <p className="hero-copy">SFO Bay Area | US Time Zone | Remote</p>
           <div className="cta-row">
-            <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal via Email</a>
+            <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal</a>
+            <span className="hero-location mono">SFO Bay Area · US Time Zone · Remote</span>
           </div>
         </div>
       </section>
 
-      <section className="about section-grid" aria-labelledby="about-heading">
-        <h2 id="about-heading" className="section-title">About</h2>
-        <div className="about-content">
-          <p className="about-lead">
-            Most enterprise AI initiatives are stuck in the &ldquo;Chatbot&rdquo; phase. I help companies move beyond
-            simple RAG to build autonomous Agentic solutions that actually execute work.
-          </p>
-          <p className="about-body">
-            As the Founding Architect of Oracle CX Unity, I designed and scaled a global platform for 200+ enterprise
-            customers across 24 regions. Today, I offer my 15+ years of systems architecture experience as a Remote
-            Design &amp; Build Contractor for organizations ready to deploy production-grade AI.
-          </p>
-
-          <h3 className="about-subheading">What I Deliver for Clients</h3>
-          <div className="feature-list">
-            <article className="feature-item">
-              <h3>Agentic Orchestration</h3>
-              <p>
-                I design and build stateful, multi-step reasoning workflows and Multi-Agent Systems (MAS) using{' '}
-                <strong>LangGraph</strong> and <strong>LangChain</strong>.
-              </p>
-            </article>
-            <article className="feature-item">
-              <h3>Enterprise-Grade RAG</h3>
-              <p>
-                I implement advanced retrieval patterns, including <strong>semantic chunking</strong> and{' '}
-                <strong>metadata filtering</strong>, to achieve 60% higher servicing efficiency.
-              </p>
-            </article>
-            <article className="feature-item">
-              <h3>High-Velocity Implementation</h3>
-              <p>
-                I accelerate AI solution delivery from weeks to days (up to 80% improvement in release velocity) by
-                engineering cloud-agnostic, automated delivery pipelines.
-              </p>
-            </article>
-            <article className="feature-item">
-              <h3>Governed LLMOps</h3>
-              <p>
-                I architect secure, observable, and cost-efficient AI platforms using <strong>KServe</strong>,{' '}
-                <strong>ArgoCD</strong>, and <strong>OpenTelemetry</strong> to ensure models are production-ready.
-              </p>
-            </article>
+      <section className="about section-grid" aria-labelledby="about-heading" id="about">
+        <div className="section-header">
+          <h2 id="about-heading" className="section-title">About</h2>
+        </div>
+        <div className="about-layout">
+          <div className="about-intro">
+            <p className="about-lead">
+              Most enterprise AI initiatives are stuck in the &ldquo;Chatbot&rdquo; phase. I help companies move beyond
+              simple RAG to build autonomous Agentic solutions that actually execute work.
+            </p>
+            <p className="about-body">
+              As the Founding Architect of Oracle CX Unity, I designed and scaled a global platform for 200+ enterprise
+              customers across 24 regions. Today, I offer my 15+ years of systems architecture experience as a Remote
+              Design &amp; Build Contractor for organizations ready to deploy production-grade AI.
+            </p>
+            <p className="about-bridge">
+              I bridge the gap between &ldquo;bleeding-edge&rdquo; AI experimentation and the stable, secure
+              infrastructure required by the modern enterprise.
+            </p>
           </div>
 
-          <h3 className="about-subheading">The Engagement Model</h3>
-          <p className="about-body">I specialize in high-impact, remote contracts focused on:</p>
-          <div className="feature-list">
-            <article className="feature-item">
-              <h3>Architectural Blueprints</h3>
-              <p>Designing the foundation for scalable Agentic workflows.</p>
-            </article>
-            <article className="feature-item">
-              <h3>Prototype-to-Production Builds</h3>
-              <p>
-                &ldquo;Wiring together&rdquo; enterprise APIs and multi-agent systems for rapid deployment.
-              </p>
-            </article>
-            <article className="feature-item">
-              <h3>AI Governance Audits</h3>
-              <p>
-                Leveraging insights from my upcoming book,{' '}
-                <em>The AI Governance North Star</em>, to architect trust and compliance into Agentic systems.
-              </p>
-            </article>
-          </div>
+          <div className="about-services">
+            <h3 className="about-subheading">What I Deliver</h3>
+            <div className="card-grid-2">
+              <article className="feature-item reveal">
+                <h4>Agentic Orchestration</h4>
+                <p>
+                  Stateful, multi-step reasoning workflows and Multi-Agent Systems (MAS) using{' '}
+                  <strong>LangGraph</strong> and <strong>LangChain</strong>.
+                </p>
+              </article>
+              <article className="feature-item reveal">
+                <h4>Enterprise-Grade RAG</h4>
+                <p>
+                  Advanced retrieval with <strong>semantic chunking</strong> and <strong>metadata filtering</strong>{' '}
+                  — 60% higher servicing efficiency.
+                </p>
+              </article>
+              <article className="feature-item reveal">
+                <h4>High-Velocity Delivery</h4>
+                <p>
+                  Cloud-agnostic, automated pipelines that compress delivery from weeks to days —{' '}
+                  up to 80% improvement in release velocity.
+                </p>
+              </article>
+              <article className="feature-item reveal">
+                <h4>Governed LLMOps</h4>
+                <p>
+                  Secure, observable, cost-efficient AI platforms using <strong>KServe</strong>,{' '}
+                  <strong>ArgoCD</strong>, and <strong>OpenTelemetry</strong>.
+                </p>
+              </article>
+            </div>
 
-          <p className="about-bridge">
-            I bridge the gap between &ldquo;bleeding-edge&rdquo; AI experimentation and the stable, secure
-            infrastructure required by the modern enterprise.
-          </p>
+            <h3 className="about-subheading">Engagement Model</h3>
+            <div className="card-grid-3">
+              <article className="feature-item reveal">
+                <h4>Architectural Blueprints</h4>
+                <p>Designing the foundation for scalable Agentic workflows.</p>
+              </article>
+              <article className="feature-item reveal">
+                <h4>Prototype → Production</h4>
+                <p>Wiring together enterprise APIs and multi-agent systems for rapid deployment.</p>
+              </article>
+              <article className="feature-item reveal">
+                <h4>AI Governance Audits</h4>
+                <p>
+                  Architecting trust and compliance into Agentic systems — informed by{' '}
+                  <em>The AI Governance North Star</em>.
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="section-grid" aria-labelledby="deep-dive-heading">
+      <section className="section-grid" aria-labelledby="deep-dive-heading" id="deep-dive">
         <h2 id="deep-dive-heading" className="section-title">The Agentic Deep Dive</h2>
-        <div className="feature-list">
+        <div className="card-grid-2">
           <article className="feature-item">
             <h3>Autonomous Orchestration</h3>
             <p>
               Architecting stateful, multi-step reasoning using <strong>LangGraph</strong> to automate complex
-              operational servicing, achieving a 50% reduction in manual effort.
+              operational servicing — 50% reduction in manual effort.
             </p>
           </article>
           <article className="feature-item">
@@ -138,91 +144,95 @@ export default function HomePage() {
           <article className="feature-item">
             <h3>Production RAG</h3>
             <p>
-              High-scale implementation of <strong>Semantic Chunking</strong> and <strong>Metadata Filtering</strong>{' '}
-              using OCI Vector Search, improving retrieval efficiency by 60%.
+              High-scale <strong>Semantic Chunking</strong> and <strong>Metadata Filtering</strong>{' '}
+              via OCI Vector Search — 60% retrieval efficiency improvement.
             </p>
           </article>
           <article className="feature-item">
             <h3>Inference Observability</h3>
             <p>
-              Engineering robust distributed tracing for non-deterministic Agentic workflows to ensure
-              enterprise-grade auditability and reliability.
+              Distributed tracing for non-deterministic Agentic workflows — enterprise-grade auditability
+              and reliability at scale.
             </p>
           </article>
-          <article className="feature-item">
+          <article className="feature-item card-grid-2-span">
             <h3>Industry Leadership</h3>
             <p>
-              Featured Panelist at the <strong>AI Infra Summit 2026</strong> (Santa Clara) |{' '}
-              <strong>Compute Track</strong> panel alongside Kentik, presenting on{' '}
+              Featured Panelist at the <strong>AI Infra Summit 2026</strong> (Santa Clara) ·{' '}
+              <strong>Compute Track</strong> alongside Kentik —{' '}
               <strong>Securing End-to-End Tracing in the AI Inference Era</strong>.
             </p>
           </article>
         </div>
       </section>
 
-      <section className="impact section-grid" aria-labelledby="impact-heading">
+      <section className="impact section-grid" aria-labelledby="impact-heading" id="impact">
         <h2 id="impact-heading" className="section-title">Agentic Impact Metrics</h2>
         <div className="bento-grid">
           <article className="bento-card reveal">
-            <p className="metric">50% Operational Efficiency</p>
+            <p className="metric">50%</p>
+            <p className="metric-label">Operational Efficiency</p>
             <p>
-              Reduced manual document-servicing effort by 50% for a global customer base by architecting autonomous
-              Multi-Agent Systems (MAS) using LangGraph for stateful, multi-step reasoning.
+              Reduced manual document-servicing effort by architecting autonomous Multi-Agent Systems (MAS)
+              using LangGraph for stateful, multi-step reasoning.
             </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">60% Insight Retrieval Gain</p>
+            <p className="metric">60%</p>
+            <p className="metric-label">Insight Retrieval Gain</p>
             <p>
-              Engineered production-grade RAG platforms utilizing semantic chunking and metadata filtering, reducing
-              complex insight retrieval latency from minutes to sub-second responses.
+              Production-grade RAG with semantic chunking and metadata filtering — retrieval latency from
+              minutes to sub-second responses.
             </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">80% AI Delivery Acceleration</p>
+            <p className="metric">80%</p>
+            <p className="metric-label">AI Delivery Acceleration</p>
             <p>
-              Accelerated the lifecycle of Agentic workflows by architecting AI-augmented golden-path pipelines,
-              reducing regional onboarding and release velocity from weeks to days.
+              AI-augmented golden-path pipelines compressing regional onboarding and release velocity
+              from weeks to days.
             </p>
           </article>
           <article className="bento-card reveal">
-            <p className="metric">100% Deterministic AI Governance</p>
+            <p className="metric">100%</p>
+            <p className="metric-label">Deterministic AI Governance</p>
             <p>
-              Achieved 100% auditable ML delivery and drift detection for non-deterministic workloads by integrating
-              GitOps (ArgoCD) with embedded Policy-as-Code (OPA/Rego) guardrails.
+              Auditable ML delivery and drift detection via GitOps (ArgoCD) with embedded
+              Policy-as-Code (OPA/Rego) guardrails.
             </p>
           </article>
         </div>
       </section>
 
-      <section className="section-grid" aria-labelledby="kb-heading">
+      <section className="section-grid" aria-labelledby="kb-heading" id="kb">
         <h2 id="kb-heading" className="section-title">Knowledge Base</h2>
-        <div className="feature-list">
+        <div className="card-grid-3 kb-top">
           <article className="feature-item">
-            <p className="mono">BOOK</p>
+            <p className="mono kb-type">BOOK</p>
             <h3>AI Governance NorthStar</h3>
-            <p>A book on AI Governance.</p>
-            <p><a href="https://lnkd.in/gKUheZer" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a></p>
+            <p>A practitioner&rsquo;s guide to governance in enterprise AI systems.</p>
+            <p><a href="https://lnkd.in/gKUheZer" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></p>
           </article>
           <article className="feature-item">
-            <p className="mono">BOOK</p>
-            <h3>The Elastic Brain.</h3>
-            <p>A book on Kubernates autoscaling for ML based applications.</p>
-            <p><a href="https://lnkd.in/gdUKzrP9" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a></p>
+            <p className="mono kb-type">BOOK</p>
+            <h3>The Elastic Brain</h3>
+            <p>Kubernetes autoscaling strategies for ML-based applications.</p>
+            <p><a href="https://lnkd.in/gdUKzrP9" target="_blank" rel="noopener noreferrer">Read on LinkedIn →</a></p>
           </article>
           <article className="feature-item">
-            <p className="mono">TALK</p>
+            <p className="mono kb-type">TALK</p>
             <h3>Securing End-to-End Tracing in the AI Inference Era</h3>
-            <p>Upcoming: AI Infra Summit 2026.</p>
+            <p>AI Infra Summit 2026 · Santa Clara · Compute Track</p>
           </article>
-          <article className="feature-item">
-            <p className="mono">ARTICLES</p>
-            <ul className="article-list">
-              <li><a href="https://lnkd.in/gEqdEdZP" target="_blank" rel="noopener noreferrer">Advanced Context Engineering for Agentic RAG</a></li>
-              <li><a href="https://lnkd.in/gDhB4tiQ" target="_blank" rel="noopener noreferrer">Agentic Orchestration Patterns</a></li>
-              <li><a href="https://lnkd.in/gRkpdVJG" target="_blank" rel="noopener noreferrer">Multi-Agent Architecture Design Patterns</a></li>
-              <li><a href="https://lnkd.in/gXwrqDxw" target="_blank" rel="noopener noreferrer">Building Resilient Agentic Workflows with AWS Bedrock</a></li>
-            </ul>
-          </article>
+        </div>
+        <div className="feature-item kb-articles">
+          <p className="mono kb-type">ARTICLES</p>
+          <ul className="article-list">
+            <li><a href="https://lnkd.in/gEqdEdZP" target="_blank" rel="noopener noreferrer">Advanced Context Engineering for Agentic RAG</a></li>
+            <li><a href="https://lnkd.in/gDhB4tiQ" target="_blank" rel="noopener noreferrer">Agentic Orchestration Patterns</a></li>
+            <li><a href="https://lnkd.in/gRkpdVJG" target="_blank" rel="noopener noreferrer">Multi-Agent Architecture Design Patterns</a></li>
+            <li><a href="https://lnkd.in/gXwrqDxw" target="_blank" rel="noopener noreferrer">Building Resilient Agentic Workflows with AWS Bedrock</a></li>
+          </ul>
         </div>
       </section>
 
@@ -230,42 +240,46 @@ export default function HomePage() {
         <h2 id="timeline-heading" className="section-title">Professional Chronology</h2>
         <div className="timeline-list">
           <article className="timeline-item">
-            <p className="timeline-title">2019 – Present | Senior Principal Architect (AI & Platform), Oracle CX Unity</p>
-            <ul>
-              <li>Leading Zero-to-One SaaS strategy and Multi-Agent Orchestration.</li>
-            </ul>
+            <p className="timeline-period mono">2019 – Present</p>
+            <p className="timeline-title">Senior Principal Architect (AI &amp; Platform) · Oracle CX Unity</p>
+            <p>Leading Zero-to-One SaaS strategy and Multi-Agent Orchestration at global scale.</p>
           </article>
           <article className="timeline-item">
-            <p className="timeline-title">2016 – 2019 | Principal Software Engineer, Oracle Fusion Apps</p>
-            <ul>
-              <li>Modernized global provisioning frameworks and event-driven automation.</li>
-            </ul>
+            <p className="timeline-period mono">2016 – 2019</p>
+            <p className="timeline-title">Principal Software Engineer · Oracle Fusion Apps</p>
+            <p>Modernized global provisioning frameworks and event-driven automation.</p>
           </article>
           <article className="timeline-item">
-            <p className="timeline-title">2013 – 2016 | Big Data Architect</p>
-            <ul>
-              <li>Migrated RDBMS to distributed Hadoop/Spark clusters; engineered real-time Kafka pipelines.</li>
-            </ul>
+            <p className="timeline-period mono">2013 – 2016</p>
+            <p className="timeline-title">Big Data Architect</p>
+            <p>Migrated RDBMS to distributed Hadoop/Spark clusters; engineered real-time Kafka pipelines.</p>
           </article>
           <article className="timeline-item">
-            <p className="timeline-title">Prior – 2013 | Lead Software Engineer (8 Years Java/J2EE)</p>
-            <ul>
-              <li>Designed resilient backend services and high-concurrency REST APIs.</li>
-            </ul>
+            <p className="timeline-period mono">Prior – 2013</p>
+            <p className="timeline-title">Lead Software Engineer · 8 Years Java/J2EE</p>
+            <p>Designed resilient backend services and high-concurrency REST APIs.</p>
           </article>
         </div>
       </section>
 
       <footer className="contact section-grid" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="section-title">SIVA SANKAR TUMMALA</h2>
-        <p className="footer-line mono">shivashankar.tummala@gmail.com</p>
-        <p className="footer-line">
-          <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          {' | '}
-          <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </p>
-        <p className="footer-line">Credentials: OCI Certified Cloud Architect & Generative AI Professional (2025)</p>
-        <p className="footer-line">Academic: MS in Computer Science (4.0 GPA) | MCA | BCA</p>
+        <div className="footer-layout">
+          <div>
+            <h2 id="contact-heading" className="footer-name">SIVA SANKAR TUMMALA</h2>
+            <p className="footer-line">Fractional AI Solutions Architect · Remote</p>
+          </div>
+          <div className="footer-links">
+            <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal</a>
+            <p className="footer-line mono">shivashankar.tummala@gmail.com</p>
+            <p className="footer-line">
+              <a href="https://www.linkedin.com/in/shivashankartummala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              {' · '}
+              <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+            <p className="footer-line">OCI Certified Cloud Architect &amp; Generative AI Professional (2025)</p>
+            <p className="footer-line">MS Computer Science (4.0 GPA) · MCA · BCA</p>
+          </div>
+        </div>
       </footer>
     </main>
   );
