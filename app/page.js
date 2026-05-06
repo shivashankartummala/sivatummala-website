@@ -39,8 +39,7 @@ export default function HomePage() {
             <h2 className="hero-name">Siva Sankar<br />Tummala</h2>
             <p className="hero-subtitle">Fractional AI Solutions Architect · Agentic Orchestration Expert</p>
             <p className="hero-copy">
-              Founding Architect of Oracle CX Unity — scaled to 200+ enterprise customers across 24 regions.
-              Now available as a Remote Design &amp; Build Contractor for production-grade AI.
+              Architecting autonomous multi-agent systems and secure inference pipelines that bridge the gap between AI experimentation and enterprise-grade production.
             </p>
             <div className="cta-row">
               <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal</a>
