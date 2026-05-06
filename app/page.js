@@ -265,10 +265,6 @@ export default function HomePage() {
 
       <footer className="contact section-grid" aria-labelledby="contact-heading">
         <div className="footer-layout">
-          <div>
-            <h2 id="contact-heading" className="footer-name">SIVA SANKAR TUMMALA</h2>
-            <p className="footer-line">Fractional AI Solutions Architect · Remote</p>
-          </div>
           <div className="footer-links">
             <a href="mailto:shivashankar.tummala@gmail.com" className="cta-link">Request Contract Proposal</a>
             <p className="footer-line mono">shivashankar.tummala@gmail.com</p>
@@ -278,7 +274,6 @@ export default function HomePage() {
               <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
             </p>
             <p className="footer-line">OCI Certified Cloud Architect &amp; Generative AI Professional (2025)</p>
-            <p className="footer-line">MS Computer Science (4.0 GPA) · MCA · BCA</p>
           </div>
         </div>
       </footer>

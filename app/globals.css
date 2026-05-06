@@ -323,17 +323,8 @@ html, body {
 
 /* ── Footer ── */
 .footer-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.footer-name {
-  margin: 0 0 8px;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  letter-spacing: -0.02em;
-  font-weight: 900;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-links { display: flex; flex-direction: column; gap: 10px; }
@@ -370,7 +361,6 @@ html, body {
   .card-grid-3 { grid-template-columns: 1fr; }
   .card-grid-2-span { grid-column: auto; }
   .timeline-list { grid-template-columns: 1fr; }
-  .footer-layout { grid-template-columns: 1fr; gap: 32px; }
   .site-header { flex-wrap: wrap; }
   .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
 }
