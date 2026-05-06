@@ -79,7 +79,9 @@ html, body {
 .two-column-layout {
   border-top: 1px solid var(--border);
   padding: 80px 0;
-  margin-left: 50%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .section-title {
@@ -101,7 +103,7 @@ html, body {
 
 .hero-name {
   margin: 0 0 24px;
-  font-size: clamp(3.6rem, 10vw, 8rem);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   letter-spacing: -0.045em;
   line-height: 0.93;
   font-weight: 900;
@@ -344,7 +346,7 @@ html, body {
 @media (max-width: 1024px) {
   .about-layout { grid-template-columns: 1fr; gap: 40px; }
   .bento-grid { grid-template-columns: repeat(2, 1fr); }
-  .two-column-layout { margin-left: 0; }
+  .two-column-layout { max-width: 100%; margin-left: 0; }
 }
 
 @media (max-width: 768px) {
