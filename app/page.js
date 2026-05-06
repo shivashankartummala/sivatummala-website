@@ -159,7 +159,7 @@ export default function HomePage() {
             <h3>Industry Leadership</h3>
             <p>
               Featured Panelist at the <strong>AI Infra Summit 2026</strong> (Santa Clara) ·{' '}
-              <strong>Compute Track</strong> alongside Kentik —{' '}
+              <strong>Compute Track</strong> —{' '}
               <strong>Securing End-to-End Tracing in the AI Inference Era</strong>.
             </p>
           </article>
