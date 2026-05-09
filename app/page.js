@@ -199,6 +199,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-grid" aria-labelledby="devsecops-heading" id="devsecops">
+        <h2 id="devsecops-heading" className="section-title">DevSecOps Platform Architect</h2>
+        <div className="card-grid-2">
+          <article className="feature-item">
+            <h3>Scalable AI Orchestration (Kubernetes)</h3>
+            <p>
+              Architected mission-critical AI workloads on Oracle Kubernetes Engine (OKE) and AWS EKS, utilizing <strong>GitOps-driven delivery via ArgoCD</strong> to ensure zero-downtime deployments and <strong>99.99% SLO compliance</strong> for global clusters.
+            </p>
+          </article>
+          <article className="feature-item">
+            <h3>Immutable Infrastructure (Terraform)</h3>
+            <p>
+              Engineered reusable, cloud-agnostic <strong>Terraform modules</strong> to standardize environment provisioning across OCI, AWS, and Azure—reducing regional AI infrastructure onboarding from weeks to <strong>under 60 minutes</strong>.
+            </p>
+          </article>
+          <article className="feature-item">
+            <h3>Multi-Cloud AWS Integration</h3>
+            <p>
+              Designed resilient hybrid-cloud architectures leveraging <strong>AWS EKS</strong> for distributed inference and high-performance storage, ensuring cost-optimized compute and <strong>secure data residency</strong> for global Agentic systems.
+            </p>
+          </article>
+        </div>
+      </section>
 
       <section className="section-grid" aria-labelledby="kb-heading" id="kb">
         <h2 id="kb-heading" className="section-title">Knowledge Base</h2>
