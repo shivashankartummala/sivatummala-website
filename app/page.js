@@ -200,7 +200,7 @@ export default function HomePage() {
       </section>
 
       <section className="section-grid" aria-labelledby="devsecops-heading" id="devsecops">
-        <h2 id="devsecops-heading" className="section-title">DevSecOps Platform Architect</h2>
+        <h2 id="devsecops-heading" className="section-title">DevSecOps Architectural Foundation</h2>
         <div className="card-grid-2">
           <article className="feature-item">
             <h3>Scalable AI Orchestration (Kubernetes)</h3>
@@ -218,6 +218,12 @@ export default function HomePage() {
             <h3>Multi-Cloud AWS Integration</h3>
             <p>
               Designed resilient hybrid-cloud architectures leveraging <strong>AWS EKS</strong> for distributed inference and high-performance storage, ensuring cost-optimized compute and <strong>secure data residency</strong> for global Agentic systems.
+            </p>
+          </article>
+          <article className="feature-item">
+            <h3>Policy-as-Code & Automated Governance</h3>
+            <p>
+              Orchestrated "shift-left" security gates by embedding <strong>OPA</strong> and automated scanning directly into AI delivery pipelines. This approach ensures <strong>100% auditable governance</strong> for non-deterministic Agentic workflows and prevents configuration drift across global, multi-region environments.
             </p>
           </article>
         </div>
