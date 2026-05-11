@@ -271,6 +271,12 @@ export default function HomePage() {
               <h3>OCI Certified Generative AI Professional</h3>
             </a>
           </article>
+          <article className="cert-card">
+            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=251E1DE16A168CFA2A9C525F86E8CC12191D3B28823DAECE26B49B5EB640D55C" target="_blank" rel="noopener noreferrer" className="cert-link">
+              <img src="/images/OCI25FNDCFAV1.png" alt="Oracle Cloud Infrastructure Certified Foundations Associate" className="cert-badge" />
+              <h3>Oracle Cloud Infrastructure Certified Foundations Associate</h3>
+            </a>
+          </article>
         </div>
       </section>
 
