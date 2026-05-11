@@ -266,7 +266,7 @@ export default function HomePage() {
             </a>
           </article>
           <article className="cert-card">
-            <a href="https://www.credly.com/badges/0cefb1ad-b22d-4e89-8bc6-9b55055ba1c3" target="_blank" rel="noopener noreferrer" className="cert-link">
+            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=07540D727509588460AB40B480CA987336EF202C1C58CAD78AE55D751DD996D2" target="_blank" rel="noopener noreferrer" className="cert-link">
               <img src="/images/OCI-Certified-GenAI-Professional.png" alt="OCI Certified Generative AI Professional" className="cert-badge" />
               <h3>OCI Certified Generative AI Professional</h3>
             </a>
