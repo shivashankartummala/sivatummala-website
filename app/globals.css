@@ -324,6 +324,49 @@ html, body {
 }
 .article-list a:hover { border-bottom-color: var(--text); }
 
+/* ── Certifications ── */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cert-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.cert-badge {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.cert-card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 160px;
+}
+
 /* ── Timeline ── */
 .timeline-list {
   display: grid;
@@ -399,6 +442,7 @@ html, body {
   .site-header { flex-wrap: wrap; }
   .hero-name-section { gap: 16px; margin-bottom: 20px; }
   .hero-photo { width: 70px; height: 70px; }
+  .certs-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

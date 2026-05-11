@@ -256,6 +256,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-grid" aria-labelledby="certs-heading" id="certs">
+        <h2 id="certs-heading" className="section-title">Certifications & Credentials</h2>
+        <div className="certs-grid">
+          <article className="cert-card">
+            <a href="https://www.credly.com/badges/a895575f-49ed-4f1d-a031-893165637768/linked_in_profile" target="_blank" rel="noopener noreferrer" className="cert-link">
+              <img src="/images/aws-certified-solutions-architect-professional.png" alt="AWS Certified Solutions Architect – Professional" className="cert-badge" />
+              <h3>AWS Certified Solutions Architect – Professional</h3>
+            </a>
+          </article>
+          <article className="cert-card">
+            <a href="https://www.credly.com/badges/0cefb1ad-b22d-4e89-8bc6-9b55055ba1c3" target="_blank" rel="noopener noreferrer" className="cert-link">
+              <img src="/images/OCI-Certified-GenAI-Professional.png" alt="OCI Certified Generative AI Professional" className="cert-badge" />
+              <h3>OCI Certified Generative AI Professional</h3>
+            </a>
+          </article>
+        </div>
+      </section>
+
       <section className="timeline section-grid" aria-labelledby="timeline-heading">
         <h2 id="timeline-heading" className="section-title">Professional Chronology</h2>
         <div className="timeline-list">
@@ -292,7 +310,6 @@ export default function HomePage() {
               {' · '}
               <a href="https://github.com/shivashankartummala" target="_blank" rel="noopener noreferrer">GitHub</a>
             </p>
-            <p className="footer-line">OCI Certified Cloud Architect &amp; Generative AI Professional (2025)</p>
           </div>
         </div>
       </footer>
