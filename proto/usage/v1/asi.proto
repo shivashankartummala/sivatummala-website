@@ -1,0 +1,217 @@
+syntax = "proto3";
+
+package usage.v1;
+
+option go_package = "github.com/usage-spec/usage-go/proto/usage/v1";
+option java_package = "com.usage.v1";
+option java_multiple_files = true;
+option csharp_namespace = "Usage.V1";
+
+// AgentSignal defines control signals that can be sent to a USAGE-compliant agent process.
+enum AgentSignal {
+  SIG_AGENT_UNSPECIFIED = 0;  // Unspecified signal; invalid for transmission.
+  SIG_AGENT_TERMINATE = 1;    // Terminate the agent process immediately. Agent must clean up and enter Terminated state.
+  SIG_AGENT_PAUSE = 2;        // Pause the agent process. Agent transitions to Paused state, preserving all state.
+  SIG_AGENT_INTERRUPT = 3;    // Interrupt the current operation. Agent may pause reasoning and yield early.
+}
+
+// MemoryTier enumerates the storage tiers available in the USAGE memory virtualization system.
+enum MemoryTier {
+  TIER_UNSPECIFIED = 0;           // Unspecified tier; invalid for operations.
+  TIER_L2_VECTOR_CACHE = 1;       // Warm cache tier (SSD, Redis, in-memory databases). Fast access, moderate capacity.
+  TIER_L3_COLD_STORAGE = 2;       // Cold storage tier (S3, GCS, blob stores). Slow access, high capacity, persistent.
+}
+
+// AgentState represents the current operational state of a USAGE-compliant agent process.
+enum AgentState {
+  STATE_UNSPECIFIED = 0;  // Unspecified state; should not occur in compliant implementations.
+  STATE_PENDING = 1;      // Agent spawned but not yet activated with identity context.
+  STATE_ACTIVE = 2;       // Agent has established identity and is ready to reason.
+  STATE_THINKING = 3;     // Agent is actively engaged in inference or planning.
+  STATE_PAUSED = 4;       // Agent has yielded control and is awaiting action from substrate.
+  STATE_TERMINATED = 5;   // Agent process has concluded; all resources released.
+}
+
+// UsageSubstrateCore is the main gRPC service that defines the Agent Substrate Interface (ASI).
+// All USAGE-compliant substrates must implement this service.
+service UsageSubstrateCore {
+  // UsageSpawn initializes a new agent process with the specified configuration and capabilities.
+  // The agent enters the Pending state and waits for the substrate to activate its identity boundary.
+  rpc UsageSpawn(SpawnRequest) returns (SpawnResponse);
+  
+  // UsageYield allows the agent to serialize its state and yield control back to the substrate.
+  // This is used for checkpointing, memory management, and governance evaluations.
+  rpc UsageYield(YieldRequest) returns (YieldResponse);
+  
+  // UsageSignal delivers a control signal to the agent process.
+  // Signals include termination, pause, and interrupt directives.
+  rpc UsageSignal(SignalRequest) returns (SignalResponse);
+  
+  // UsageMemPageOut triggers memory tier transitions for the agent.
+  // The agent requests that token context be moved from L1 (hot) to L2 (warm) or L3 (cold) storage.
+  rpc UsageMemPageOut(PageOutRequest) returns (PageOutResponse);
+  
+  // UsageCallTool invokes an external tool within the agent's governance boundary.
+  // Tool execution is gated by the agent's capability set; unauthorized tool invocations are rejected.
+  rpc UsageCallTool(ToolRequest) returns (ToolResponse);
+}
+
+// SpawnRequest is used to initialize a new agent process.
+// It specifies the parent process context, required capabilities, and resource quotas.
+message SpawnRequest {
+  // parent_pid is the process identifier of the parent agent, if any.
+  // For root agents, this field is 0.
+  uint64 parent_pid = 1;
+  
+  // capabilities is a list of capability names that the agent is granted.
+  // Examples: "invoke_web_search", "read_database", "execute_code".
+  // The substrate verifies these against its capability registry.
+  repeated string capabilities = 2;
+  
+  // environment is a key-value map of environment variables to be injected into the agent's context.
+  // Common variables: "MODEL_ID", "AGENT_NAME", "DEPLOYMENT_ENV".
+  map<string, string> environment = 3;
+  
+  // max_tokens_quota is the maximum number of tokens the agent is allowed to consume in this session.
+  // The runtime enforces this quota across all invocations.
+  uint64 max_tokens_quota = 4;
+  
+  // sandbox_level specifies the security isolation level for this agent.
+  // Valid values: "strict" (maximum isolation), "moderate", "permissive" (minimum isolation).
+  string sandbox_level = 5;
+}
+
+// SpawnResponse is returned after a successful agent spawn operation.
+// It provides the session identifier and initial metadata for the agent process.
+message SpawnResponse {
+  // session_id is a unique identifier for this agent process session.
+  // All subsequent RPCs targeting this agent must use this session_id.
+  string session_id = 1;
+  
+  // initial_state is the state the agent enters immediately after spawning.
+  // Typically STATE_PENDING; the substrate must transition to STATE_ACTIVE and eventually STATE_THINKING.
+  AgentState initial_state = 2;
+  
+  // state_metadata is a JSON-encoded blob containing runtime metadata about the agent's initial state.
+  // This may include session timestamps, resource allocations, or runtime-specific annotations.
+  string state_metadata = 3;
+}
+
+// YieldRequest is used by the agent to serialize its state and yield control to the substrate.
+// This is the primary checkpoint mechanism for state reproducibility and memory management.
+message YieldRequest {
+  // session_id identifies the agent process yielding control.
+  string session_id = 1;
+  
+  // context_state_blob is a serialized representation of the agent's full reasoning state.
+  // This blob is opaque to the substrate; the agent encodes and decodes it.
+  // The substrate stores this blob for checkpointing and may make it available for later resumption.
+  bytes context_state_blob = 2;
+  
+  // current_state is the state the agent is in as it yields.
+  // Typically STATE_THINKING; the substrate transitions the agent to STATE_PAUSED upon receipt of this request.
+  AgentState current_state = 3;
+  
+  // tokens_consumed is the number of tokens the agent has consumed up to this yield point.
+  // The runtime uses this to enforce token quotas.
+  uint64 tokens_consumed = 4;
+}
+
+// YieldResponse acknowledges a successful state serialization and yield operation.
+message YieldResponse {
+  // acknowledged indicates whether the substrate successfully received and stored the agent's state.
+  bool acknowledged = 1;
+  
+  // checkpoint_id is an identifier for the stored state checkpoint.
+  // The agent can reference this checkpoint in future operations if needed.
+  string checkpoint_id = 2;
+}
+
+// SignalRequest is used to send control signals to the agent process.
+message SignalRequest {
+  // session_id identifies the target agent process.
+  string session_id = 1;
+  
+  // signal is the control signal to be delivered to the agent.
+  // Valid signals: SIG_AGENT_TERMINATE, SIG_AGENT_PAUSE, SIG_AGENT_INTERRUPT.
+  AgentSignal signal = 2;
+}
+
+// SignalResponse acknowledges successful signal delivery and state transition.
+message SignalResponse {
+  // signal_accepted indicates whether the substrate accepted the signal.
+  bool signal_accepted = 1;
+  
+  // new_state is the state the agent transitions into following signal delivery.
+  // Example: SIG_AGENT_TERMINATE → STATE_TERMINATED, SIG_AGENT_PAUSE → STATE_PAUSED.
+  AgentState new_state = 2;
+  
+  // transition_timestamp is a Unix timestamp (seconds since epoch) marking when the state transition occurred.
+  int64 transition_timestamp = 3;
+}
+
+// PageOutRequest is used to trigger memory tier transitions for the agent.
+// The agent explicitly requests that context be paged from L1 (hot) to L2 (warm) or L3 (cold) storage.
+message PageOutRequest {
+  // session_id identifies the agent process issuing the page-out request.
+  string session_id = 1;
+  
+  // target_tier specifies the destination storage tier for the memory being paged.
+  // TIER_L2_VECTOR_CACHE: Page to warm cache (e.g., vector database, Redis).
+  // TIER_L3_COLD_STORAGE: Page to cold storage (e.g., S3, GCS).
+  MemoryTier target_tier = 2;
+  
+  // token_payload is a serialized string representation of the context being paged out.
+  // The substrate uses this payload to address and store the context in the target tier.
+  // Format is opaque to the substrate (typically JSON or Base64-encoded binary).
+  string token_payload = 3;
+}
+
+// PageOutResponse provides addressing information for the paged-out context.
+message PageOutResponse {
+  // address_reference is a pointer/locator for the paged-out context in the target storage tier.
+  // Example: "s3://bucket-name/path/to/context" or "redis://key-id".
+  // The agent uses this reference to later retrieve the context.
+  string address_reference = 1;
+  
+  // tier_acknowledged confirms which tier the context was paged to.
+  MemoryTier tier_acknowledged = 2;
+  
+  // storage_timestamp is a Unix timestamp marking when the context was stored.
+  int64 storage_timestamp = 3;
+}
+
+// ToolRequest is used to invoke an external tool within the agent's governance boundary.
+// Tool execution is gated by the agent's capability set and the substrate's tool registry.
+message ToolRequest {
+  // session_id identifies the agent process requesting tool invocation.
+  string session_id = 1;
+  
+  // tool_registry_name is the fully qualified name of the tool to invoke.
+  // Examples: "web_search", "database.query", "code_executor.run".
+  // The substrate verifies this tool name against the agent's capability set.
+  string tool_registry_name = 2;
+  
+  // arguments_payload is a JSON-encoded string containing the tool invocation arguments.
+  // Format: {"arg1": "value1", "arg2": value2, ...}
+  // The substrate passes this payload to the tool executor without modification.
+  string arguments_payload = 3;
+}
+
+// ToolResponse returns the result of a tool invocation.
+message ToolResponse {
+  // execution_success indicates whether the tool invocation completed successfully.
+  bool execution_success = 1;
+  
+  // result_payload is a JSON-encoded string containing the tool execution result.
+  // Format is tool-specific; the substrate returns the result as-is from the tool executor.
+  // Example: {"status": "success", "data": {...}} or {"error": "tool failed"}.
+  string result_payload = 2;
+  
+  // execution_time_ms is the wall-clock time (in milliseconds) the tool took to execute.
+  uint32 execution_time_ms = 3;
+  
+  // error_message is populated if execution_success is false.
+  // Contains a human-readable description of the failure.
+  string error_message = 4;
+}
